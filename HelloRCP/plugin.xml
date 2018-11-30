@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.pabo.hellorcp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.pabo.hellorcp.Perspective"
+            id="org.pabo.HelloRCP.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.pabo.hellorcp.LeftView"
+            id="org.pabo.hellorcp.LeftView"
+            name="New ViewPart">
+      </view>
+      <view
+            class="org.pabo.hellorcp.RightView"
+            id="org.pabo.hellorcp.RightView"
+            name="view">
+      </view>
+      <view
+            class="org.pabo.hellorcp.NameTable"
+            id="org.pabo.hellorcp.NameTable"
+            name="table">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.pabo.hellorcp.EditView"
+            id="org.pabo.hellorcp.EditView"
+            name="New EditorPart">
+      </editor>
+   </extension>
+
+</plugin>
